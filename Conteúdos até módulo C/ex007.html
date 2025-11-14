@@ -6,8 +6,9 @@
     <title>Somando números</title>
     <style>
         body {
-            background-color: antiquewhite;
+            background-color: rgb(238, 202, 156);
             font: normal 10pt Arial;
+            text-align: center;
         }
         div#result {
             text-align: center;
@@ -15,6 +16,7 @@
             border: 1px solid black;
             width: 169px;
             margin-top: 10px;
+            margin-left: 34.2%;
         }
     </style>
 </head>
@@ -24,11 +26,12 @@
     <input type="number" name="txtn2" id="txtn2">
     <input type="button" value="somar" id="somar">
     <div id="result">Resultado: </div>
+
+
     <script>
-        var dresult = window.document.getElementById(`result`) //Variável que serve para mostra oresultadoda operação.
+        var dresult = window.document.getElementById(`result`) //Variável que serve para mostra o resultadoda operação.
         var sbtn = window.document.getElementById(`somar`) //Variável onde será realizada a ação de soma quando clicado e ativara a função.
         sbtn.addEventListener(`click`, somar)//Listener que ativará a função.
-
         function somar() {
             var n1 = Number(document.getElementById(`txtn1`).value)//Recebe o valor e converte para NUM.
             var n2 = Number(document.getElementById(`txtn2`).value)//Recebe o valor e converte para NUM.
@@ -38,3 +41,4 @@
     </script>
 </body>
 </html>
+
