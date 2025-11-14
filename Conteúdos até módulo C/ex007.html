@@ -9,9 +9,9 @@
             background-color: antiquewhite;
             font: normal 10pt Arial;
         }
-        div#resultado {
-            background: white;
+        div#result {
             text-align: center;
+            background: white;
             border: 1px solid black;
             width: 169px;
             margin-top: 10px;
@@ -22,15 +22,18 @@
     <h1>Somando valores:</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
-    <div id="resultado">Resultado: </div>
+    <input type="button" value="somar" id="somar">
+    <div id="result">Resultado: </div>
     <script>
+        var dresult = window.document.getElementById(`result`) //Variável que serve para mostra oresultadoda operação.
+        var sbtn = window.document.getElementById(`somar`) //Variável onde será realizada a ação de soma quando clicado e ativara a função.
+        sbtn.addEventListener(`click`, somar)//Listener que ativará a função.
+
         function somar() {
-            var n1 = Number(window.document.getElementById(`txtn1`).value)
-            var n2 = Number(window.document.getElementById(`txtn2`).value)
-            var res = window.document.getElementById(`resultado`)
-            var soma = n1 + n2
-            res.innerHTML = `<strong>${soma}</strong>`
+            var n1 = Number(document.getElementById(`txtn1`).value)//Recebe o valor e converte para NUM.
+            var n2 = Number(document.getElementById(`txtn2`).value)//Recebe o valor e converte para NUM.
+            var resultado = n1 + n2//Recebe os valores STR convertidos em NUM e realiza a soma.
+            dresult.innerHTML = `<strong>${resultado}</strong>`//A função termina escrevendo o resultado na váriável.
         }
     </script>
 </body>
