@@ -1,0 +1,28 @@
+
+// OPERADORES ARITMÉTICOS E DE ATRIBUIÇÃO:
+
+// Operadorem em JS
+// Soma                          +
+// Sub                           -
+// Mult                          *
+// Divisão Inteiros              /
+// Divisão resto                 %
+// Potência                      **
+
+// RELACIONAIS
+// Maior                         >
+// Menor                         <
+// Maior OU igual               >=
+// Menor OU igual               <=
+// Sinal de IGUALDADE           ==
+//Sinal de DIFERENÇA            !=
+
+// LÓGICOS
+// Negaçao                       !
+// Conjunção (esse E aquele)    &&
+// Disjunção (esse OU aquele)   ||
+
+// TERNÁRIO (3)
+// ? 
+// :
+// {5 > 4} ? {true} : {false} == true
