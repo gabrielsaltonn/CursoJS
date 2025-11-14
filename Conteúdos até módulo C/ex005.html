@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeriros passos com "DOM"</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            color: grey;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeriros passos com "DOM"</h1>
+    <p>Aqui vai o resultado:</p>
+    <p>Aprendendo a usar <strong>"DOM"</strong> em JavaScript.</p>
+    <div>Clique em mim!</div>
+    <div id ="msg">Sou a "div" com "id"!</div>
+    <div name="msg">Sou a "div" com "name"</div>
+    <div class="msg">Sou a "div" com "class"</div>
+    <script>
+        // Seletor de tag (Pode selecionar vários "componentes" do HTML de uma só vez)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(`Exemplo com InnerText: ${p1.innerText}</br>`)
+
+        // Ha dua formas de escrever na página HTML atrávés de JS
+        // innerText (Escreve o conteúdo elemento do sem formatações) e InnerHTML (Escreve o conteúdo do elemento com as formatações)
+        window.document.writeln(`Exemplo com InnerHTML: ${p1.innerHTML}`)
+        // Repare na página como está ecrito "DOM".
+
+        // existem outros métodos de seleção de elementos como:
+        // geElementById() (Singular)
+
+        // var msg = window.document.getElementById(`msg`)
+        // msg.style.background = "White"
+        // msg.innerHTML = 'Texto alterado pelo JS!'
+
+        //getElementByName() (Singular)
+        // getElementsByClassName (Plural)
+        // querySelector()
+
+        var msg = window.document.querySelector(`div#msg`)
+        msg.style.color = "White"
+        msg.style.background = "Gray"
+        msg.innerHTML = `Agora sou a "div" aprensetada por "querySelector()"`
+        // id = #
+        // class = .
+    </script>
+</body>
+</html>
