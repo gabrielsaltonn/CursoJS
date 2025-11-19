@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+            color: gray;
+        }
+        input {
+            text-align: center;
+        }
+
+        div.res {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    País de origem: <input type="text" name="pais" id="pais">
+    <input type="button" value="verificar" id="verificar">
+    <div id="res"></div>
+    <script>
+        var verif = document.getElementById(`verificar`)
+        verif.addEventListener(`click`, local)
+        var dres = document.getElementById(`res`)
+        var loc = document.getElementById(`pais`)
+        function local(){
+            if(loc.value == `Brasil`) {
+                dres.innerHTML=`Brasileiro!`
+            } else {
+                dres.innerHTML=`Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
